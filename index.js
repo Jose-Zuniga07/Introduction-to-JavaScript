@@ -277,7 +277,7 @@ function grade(number) {
     return `you got an F`;
   }
 }
-console.log('test 8', grade(90));
+console.log('test 8', grade(80));
 
 
 
