@@ -19,7 +19,12 @@ Do the following:
 
    HINT: no function required
 */
-
+let votingAge = 20;
+if (votingAge > 18) {
+  console.log("true")
+} else if (votingAge < 18) {
+  console.log("false")
+}
 
 
 /*
@@ -32,6 +37,14 @@ Do the following:
 
    HINT: no function required
 */
+let variOne = 5;
+let variTwo = 10;
+
+if (variTwo === 10) {
+  variOne = 1
+
+}
+console.log(variOne);
 
 
 
@@ -47,6 +60,8 @@ Do the following:
 
    HINT: look up the Number method
 */
+let stringToNum = '1999'
+console.log(parseInt(stringToNum));
 
 
 
@@ -60,9 +75,10 @@ Do the following:
    3. Multiply a and b and return the answer
 */
 
-function multiply(/*add your code here*/){
-  /*add your code here*/
+function multiply(a, b) {
+  return a * b;
 }
+console.log(multiply(2, 3))
 
 
 
@@ -76,9 +92,10 @@ Do the following:
  3. Return the newly calculated age
 */
 
-function dogYears(/*add your code here*/){
-  /*add your code here*/
+function dogYears(age, dogYears) {
+  return age * dogYears;
 }
+console.log(dogYears(1, 7));
 
 
 
@@ -107,10 +124,24 @@ Puppies less than 1 year
    7 - 12 months 4% of their body weight
   
 NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.44999999999999996
-*/  
+*/
 
-function hungryDog(/*add your code here*/){
-  /*add your code here*/
+function hungryDog(weight, age) {
+  if (age >= 1 && weight <= 5) {
+    return weight * 0.05;
+  } else if (age >= 1 && weight >= 6 && weight <= 10) {
+    return weight * 0.04;
+  } else if (age >= 1 && weight >= 11 && weight <= 15) {
+    return weight * 0.03;
+  } else if (age >= 1 && weight > 15) {
+    return weight * 0.02;
+  } else if (age < 1 && age >= 0.583) {
+    return weight * 0.04;
+  } else if (age < 0.583 && age >= 0.333) {
+    return weight * 0.05;
+  } else if (age < 0.3333) {
+    return weight * 0.1;
+  }
 }
 
 
@@ -135,9 +166,23 @@ RULES OF THE GAME: Scissors beats Paper | Paper beats Rock | Rock beats Scissors
 
 HINT: Remember that the order in which we pass in our arguments matters when it comes to parameters
 */
+let computer = Math.random();
+if (computer <= 0.33) {
+  computer = 'rock';
+} else if (computer <= 0.67) {
+  computer = 'paper'
+} else if (computer > 0.67) {
+  computer = 'scissors';
+}
 
-function game(user, computer){
-  /*add your code here*/
+function game(user, computer) {
+  if (user === computer) {
+    return 'its a tie';
+  } else if (user === 'rock' && computer === 'scissors') {
+    return 'you win!';
+  } else if (user === 'paper ') {
+
+  }
 }
 
 
@@ -153,7 +198,7 @@ Using the miles function below do the following:
 3. Return the number of miles
 */
 
-function miles(/*add your code here*/){
+function miles(/*add your code here*/) {
   /*add your code here*/
 }
 
@@ -167,7 +212,7 @@ Using the feet function below do the following:
 3. Return number of feet
 */
 
-function feet(/*add your code here*/){
+function feet(/*add your code here*/) {
   /*add your code here*/
 }
 
@@ -180,12 +225,16 @@ function feet(/*add your code here*/){
 Using the annoyingSong function below do the following:
 1. Receive a starting number and start the count down from the number received 
 2. At each invocation, it should RETURN this string (note: the tests are expecting the same string as below):
-    "{number} bottles of soda on the wall, {number} bottles of soda, take one down pass it around {number left over} bottles of soda on the wall"
+    ""
 */
 
-function annoyingSong(/*add your code here*/){
-      /*add your code here*/
+function annoyingSong(number) {
+  for (let i = number; i > 1; i--) {
+    return `${i} bottles of soda on the wall, ${i} bottles of soda, take one down pass it around ${i - 1} bottles of soda on the wall`;
+  }
 }
+
+console.log('task 6', annoyingSong(99));
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -203,8 +252,8 @@ Using the grade function below do the following:
  below should return 'you got an F'
 */
 
-function grade(/*Your Code here */){
-/*Your Code here */
+function grade(/*Your Code here */) {
+  /*Your Code here */
 }
 
 
@@ -229,7 +278,7 @@ function vowelCounter(/*add your code here*/) {
 
 
 /*🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑 Please do not modify anything below this line 🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑*/
-function foo(){
+function foo() {
   console.log('its working');
   return 'bar';
 }
